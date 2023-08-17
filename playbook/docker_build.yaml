@@ -1,6 +1,6 @@
 ---
 - name: This is playbook for deploy web.
-  hosts: all
+  hosts: ansible_host
   tasks:
     - name: Remove container if exist
       docker_container:
