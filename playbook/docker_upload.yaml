@@ -21,4 +21,8 @@
         push: true
         source: build
 
+    - name: DockerHub logout
+      docker_login:
+        state: absent
+
 ...
