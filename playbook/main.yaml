@@ -1,0 +1,4 @@
+- name: Build and Push an image
+  import_playbook: docker_upload.yaml
+- name: Run container
+  import_playbook: docker_run.yaml

@@ -1,23 +1,11 @@
 ---
 - name: This is playbook for deploy web.
-  hosts: ansible_host
+  hosts: localhost
   tasks:
     - name: Remove container if exist
       docker_container:
         state: absent
         name: my-hello-world-container
-
-    - name: Remove image if exist
-      docker_image:
-        state: absent
-        name: my-hello-world
-
-    - name: Build Dockerfile
-      docker_image:
-        name: my-hello-world
-        build:
-          path: ~/hello-world
-        source: build
 
     - name: create container
       docker_container:
@@ -27,4 +15,3 @@
         - "8080:8080"
 
 ...
-

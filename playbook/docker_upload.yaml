@@ -1,0 +1,24 @@
+---
+- name: This is a playbook for upload image on dockerHub
+  hosts: localhost
+  tasks:
+    - name: DockerHub login
+      docker_login:
+        username: roka0215
+        password: tenderr0K@
+
+    - name: Remove an image
+      docker_image:
+        state: absent
+        name: roka0215/my-hello-world
+
+    - name: Build an image and pus it to dockerHub
+      docker_image:
+        build:
+          path: ~/hello-world
+        name: roka0215/my-hello-world
+        tag: v1
+        push: true
+        source: build
+
+...
