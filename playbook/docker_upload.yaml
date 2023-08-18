@@ -21,4 +21,8 @@
         push: true
         source: build
 
+    - name: Dockerub logout
+      docker_login:
+        state: absent
+
 ...
