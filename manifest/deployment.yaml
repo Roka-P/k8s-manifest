@@ -19,4 +19,14 @@ spec:
         name: my-hello-world
         ports:
         - containerPort: 8080
+      livenessProbe:
+        httpGet:
+          port: 8080
+          path: /api
+        initialDelaySeconds: 60
+      readinessProbe:
+        httpGet:
+          port: 8080
+          path: /api
+        initialDelaySeconds: 60
 
