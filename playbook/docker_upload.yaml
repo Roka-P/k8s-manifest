@@ -7,10 +7,10 @@
         username: roka0215
         password: tenderr0K@
 
-    - name: Remove an image
-      docker_image:
-        state: absent
-        name: roka0215/my-hello-world
+#    - name: Remove an image
+#      docker_image:
+#        state: absent
+#        name: roka0215/my-hello-world
 
     - name: Build an image and pus it to dockerHub
       docker_image:
