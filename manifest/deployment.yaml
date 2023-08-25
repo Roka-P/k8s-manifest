@@ -18,5 +18,5 @@ spec:
       - image: roka0215/my-hello-world:99
         name: my-hello-world
         ports:
-        - containerPort: 8080
+        - containerPort: 8088
 
