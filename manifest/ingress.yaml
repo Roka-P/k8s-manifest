@@ -5,6 +5,7 @@ metadata:
   labels:
     app: hello-world
 spec:
+  ingressClassName: nginx
   rules:
   - host: hello.world.example.com
     http:
@@ -15,4 +16,4 @@ spec:
           service:
             name: hello-world-service
             port:
-              number: 80
+              number: 8081
