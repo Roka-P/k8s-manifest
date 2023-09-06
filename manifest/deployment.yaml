@@ -18,7 +18,7 @@ spec:
       - image: roka0215/my-hello-world:120
         name: my-hello-world
         ports:
-        - containerPort: 8081
+        - containerPort: 80
         resources:
           requests:
            cpu: 50m
