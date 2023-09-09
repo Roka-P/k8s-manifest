@@ -15,7 +15,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: roka0215/my-hello-world:363
+      - image: roka0215/my-hello-world:365
         name: my-hello-world
         ports:
         - containerPort: 8080
